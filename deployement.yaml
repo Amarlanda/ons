@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: amar-bla-bla
+  labels:
+    app: amar-bla-label
+spec:
+  selector:
+    matchLabels:
+      app: amar-bla-label
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: amar-bla-label
+    spec:
+      containers:
+      - name: amar-bla-label
+        image:  jfusterm/stress testing
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
